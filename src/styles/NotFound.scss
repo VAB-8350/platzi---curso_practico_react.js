@@ -1,0 +1,29 @@
+.cardNotFound{
+  display: flex;
+  flex-direction: column;
+}
+.titleNotFount {
+  text-align: center;
+  font-size: 150px;
+  margin: 50px 0 0;
+}
+.subtitleNotFount {
+  text-align: center;
+  font-size: 50px;
+  font-weight: normal;
+  margin: 50px 0 0;
+}
+.goHome {
+  position: absolute;
+  text-align: center;
+  right: 35%;
+  bottom: 100px;
+  padding: 10px; /*espacio alrededor texto*/
+  background-color: var(--hospital-green);
+  color: #ffffff; /*color texto*/
+  text-decoration: none; /*decoración texto*/
+  text-transform: uppercase; /*capitalización texto*/
+  font-family: 'Helvetica', sans-serif; /*tipografía texto*/
+  border-radius: 8px; /*bordes redondos*/
+  width: 30%;
+}
