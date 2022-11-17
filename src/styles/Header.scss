@@ -53,6 +53,12 @@ nav {
 .navbar-shopping-cart {
 	position: relative;
 }
+
+.navbar-shopping-cart:hover {
+	cursor: pointer;
+	transform: scale(1.2);
+}
+
 .navbar-shopping-cart div {
 	width: 16px;
 	height: 16px;

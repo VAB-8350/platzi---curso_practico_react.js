@@ -11,6 +11,8 @@ const Header = () => {
 
 	const [toggle, setToggle] = useState(false);
 	const [toggleOrders, setToggleOrders] = useState(false);
+	const [movileMenu, setMobileMenu] = useState(false)
+
 	const { state } = useContext(AppContext);
 
 	const handleToggle = () => {
@@ -19,7 +21,7 @@ const Header = () => {
 
 	return (
 		<nav>
-			<img src={menu} alt="menu" className="menu" />
+			<img src={menu} alt="menu" className="menu" onClick={() => setMobileMenu(!movileMenu)}/>
 			<div className="navbar-left">
 				<img src={logo} alt="logo" className="nav-logo" />
 				<ul>
@@ -54,8 +56,8 @@ const Header = () => {
 					</li>
 				</ul>
 			</div>
-			{toggle && <Menu />}
 			{toggleOrders && <MyOrder toggle={() => setToggleOrders(!toggleOrders)}/>}
+			{toggle && <Menu />}
 		</nav>
 	);
 }

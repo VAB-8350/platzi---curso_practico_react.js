@@ -12,6 +12,18 @@
 	border: 1px solid var(--very-light-pink);
 	border-right: 0;
 	overflow-y: scroll;
+	animation: initMyOrder .3s ease-in-out;
+}
+
+@keyframes initMyOrder {
+	0%{
+		opacity: 0;
+		transform: translate(100%);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0);
+	}
 }
 
 .title-container {
