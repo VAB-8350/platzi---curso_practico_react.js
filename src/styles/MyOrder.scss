@@ -2,26 +2,79 @@
 
 .MyOrder {
 	width: 360px;
-	padding: 24px;
+	padding: 0 24px;
 	box-sizing: border-box;
-	position: absolute;
+	position: fixed;
 	right: 0;
 	background-color: white;
 	top: 60px;
 	bottom: 0;
-	border-radius: 6px;
 	border: 1px solid var(--very-light-pink);
+	border-right: 0;
+	overflow-y: scroll;
 }
+
 .title-container {
 	display: flex;
+	position: sticky;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+	border-top: 24px solid var(--white);
+	background-color: var(--white);
 }
+
 .title-container img {
-	transform: rotate(180deg);
-	margin-right: 14px;
+	animation: arrow .5s ease-in-out;
+	animation-direction: reverse;
 }
+
+.title-container:hover {
+	cursor: pointer;
+	display: flex;
+	position: relative;
+}
+
+.title-container:hover::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto 2px;
+	width: 12px;
+	height: 3px;
+	background-color: var(--very-light-pink);
+	animation: arrow .5s ease-in-out;
+}
+
+@keyframes arrow {
+	0% {
+		opacity: 0;
+		transform-origin: left;
+		transform: rotate(-90deg);
+	}
+	100%{
+		opacity: 1;
+		transform-origin: left;
+		transform: rotate(0deg);
+	}
+}
+
+.title-container:hover img{
+	transform: scale(1.5) rotate(180deg);
+	transition: .3s;
+}
+
+.title-container img {
+	margin-right: 14px;
+	transition: .5s;
+}
+
 .title {
 	font-size: var(--lg);
 	font-weight: bold;
+	margin: 20px 0 !important;
 }
 .order {
 	display: grid;
