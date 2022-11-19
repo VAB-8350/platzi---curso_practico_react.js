@@ -84,3 +84,50 @@ nav {
 		display: none;
 	}
 }
+
+
+.burguer-menu {
+	display: none;
+	flex-direction: column;
+	gap: 20px;
+	padding: 0 24px;
+	box-sizing: border-box;
+	background-color: var(--white);
+	position: fixed;
+	top: 60px;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+
+.burguer-menu h2 {
+	color: var(--hospital-green);
+}
+
+.burguer-menu ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	margin-left: 20px;
+}
+
+.burguer-menu ul li a{
+	text-decoration: none;
+	color: var(--black);
+	font-size: var(--lg);
+	margin-bottom: 20px;
+}
+
+.burguer-menu ul li{
+	margin-bottom: 15px;
+	font-size: var(--lg);
+	cursor: pointer;
+}
+
+.burguer-menu ul .email{
+	color: var(--very-light-pink);
+}
+
+.active {
+	display: flex;
+}
