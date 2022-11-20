@@ -23,3 +23,14 @@
 	font-size: var(--md);
 	font-weight: bold;
 }
+
+.OrderItem .remove-item {
+	cursor: pointer;
+	padding: 10px;
+}
+
+.OrderItem .remove-item:hover{
+	background-color: var(--hospital-green);
+	border-radius: 30px;
+	background-color: rgb(235, 108, 108);
+}

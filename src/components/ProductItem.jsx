@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import '@styles/ProductItem.scss';
 import AppContext from '@context/AppContext';
 import addCart from '@icons/bt_add_to_cart.svg';
@@ -14,6 +14,10 @@ const ProductItem = ({ product }) => {
 		added ? removeFromCart(item) : addToCart(item);
 		setAdded(!added)
 	}
+
+	useEffect(() => {
+		console.log(state)
+	}, state)
 
 	return (
 		<div className="ProductItem">
