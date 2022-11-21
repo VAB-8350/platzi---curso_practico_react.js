@@ -7,17 +7,13 @@ import iconBtAddedCart from "@icons/bt_added_to_cart.svg"
 const ProductItem = ({ product }) => {
 	const { state, addToCart, removeFromCart} = useContext(AppContext);
 
-	const [added, setAdded] = useState(false)
-
 	const handleClick = item => {
-		
-		added ? removeFromCart(item) : addToCart(item);
-		setAdded(!added)
+		beCart() ? removeFromCart(item) : addToCart(item);
 	}
 
-	useEffect(() => {
-		console.log(state)
-	}, state)
+	const beCart = () => {
+		return !!state.cart?.find(item => item.id === product.id)
+	}
 
 	return (
 		<div className="ProductItem">
@@ -29,7 +25,7 @@ const ProductItem = ({ product }) => {
 				</div>
 				<figure onClick={() => handleClick(product)}>
 					{
-						added
+						beCart()
 							? <img src={iconBtAddedCart} alt='remove to cart' />
 							: <img src={addCart} alt='add to cart' />
 					}
